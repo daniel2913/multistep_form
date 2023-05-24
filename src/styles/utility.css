@@ -1,0 +1,54 @@
+:root{
+	--p-marine-blue: hsl(213, 96%, 18%);
+	--p-purple-blue: hsl(243, 100%, 62%);
+	--p-pastel-blue: hsl(228, 100%, 84%);
+	--p-light-blue : hsl(206, 94%, 87%);
+	--p-strawberry : hsl(354, 84%, 57%);
+
+	--n-cool-gray  : hsl(231, 11%, 63%);
+	--n-light-gray : hsl(229, 24%, 87%);
+	--n-magnolia   : hsl(217, 100%, 97%);
+	--n-alabaster  : hsl(231, 100%, 99%);
+
+	--fs-xxl: xx-large;
+	--fs-xl : x-large;
+	--fs-l  : large;
+	--fs-m  : medium;
+
+	--font-fam-ubuntu: 'Ubuntu', sans-serif;
+}
+
+
+@media (max-width:370px){
+	:root{
+		--fs-xxl: x-large;
+		--fs-xl:  larger;
+		--fs-l:   medium;
+		--fs-m:   smaller;
+	}
+}
+
+@media (max-width:300px){
+	:root{
+		--fs-xxl: larger;
+		--fs-xl:  large;
+		--fs-l:   small;
+		--fs-m:   smaller;
+	}
+}
+
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	font-family: var(--font-fam-ubuntu);
+}
+
+.disabled{
+	background-color: var(--n-cool-gray);
+}
+
+.no-display{
+	visibility:hidden;
+}

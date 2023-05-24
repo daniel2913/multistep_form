@@ -1,0 +1,10 @@
+.thank-you{
+	justify-self: center;
+	text-align: center;
+	padding:1rem;
+}
+
+
+.thank-you h1 ~ p{
+	padding:0;
+}
