@@ -1,7 +1,3 @@
-@import './styles/Page1.css';
-@import './styles/Page2.css';
-@import './styles/Page3.css';
-@import './styles/Page4.css';
-@import './styles/Page5.css';
-@import './styles/Main.css';
-@import './styles/utility.css'
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
