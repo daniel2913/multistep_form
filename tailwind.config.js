@@ -1,17 +1,3 @@
-
-const relatives = {
-	1: ".25em",
-	2: ".5em",
-	3: ".75em",
-	4: "1em",
-	5: "1.25em",
-	6: "1.5em",
-	7: "1.75em",
-	8: "2em",
-	10: "2.5em",
-	12: "3em",
-	16: "4em"
-}
 /** @type {import('tailwindcss').Config}*/
 module.exports = {
 	content: ["./src/**/*.tsx", "./public/**/*.html"],

@@ -1,6 +1,5 @@
 import check from '../assets/icon-checkmark.svg'
 import { FormPage } from '../components/FormPage'
-import { addonList, addons, yearly } from '../state'
 
 function CheckMark({ id, checked, className }: { id: string, checked: boolean,className?:string }) {
 	return (

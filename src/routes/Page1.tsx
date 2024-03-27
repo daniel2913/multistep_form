@@ -1,24 +1,19 @@
-import { Signal } from "@preact/signals"
-import { name, email, phone} from "../state"
-import { JSX } from "preact/jsx-runtime"
+import type { Signal } from "@preact/signals"
 import { FormPage as PageTitle } from "../components/FormPage"
 
 
-type InputProps = {
+type InputProps = preact.JSX.HTMLAttributes<HTMLInputElement> & {
 	label: string
 	value: Signal
-	placeholder: string
-	type?: string
-	pattern?:string
 	invalidMessage?:string
 }
 function InputField(props: InputProps) {
 		
-	function inputHandler(e:JSX.TargetedInputEvent<HTMLInputElement>){
+	function inputHandler(e:preact.JSX.TargetedInputEvent<HTMLInputElement>){
 		if (e.currentTarget.checkValidity() && e.currentTarget.value.length>0) props.value.value=e.currentTarget.value
 		else props.value.value=""
 	}
-	function blurHandler(e:JSX.TargetedFocusEvent<HTMLInputElement>){
+	function blurHandler(e:preact.JSX.TargetedFocusEvent<HTMLInputElement>){
 		if (e.currentTarget.checkValidity()) return
 		if(props.invalidMessage)
 			e.currentTarget.setCustomValidity(props.invalidMessage)
@@ -44,7 +39,14 @@ function InputField(props: InputProps) {
 	)
 }
 
-export default function Page1({ path}: { path: string}) {
+type Props = {
+	path:string
+	name:Signal<string>
+	email:Signal<string>
+	phone:Signal<string>
+}
+
+export default function Page1({name,email,phone}:Props) {
 
 	return (
 		<>
