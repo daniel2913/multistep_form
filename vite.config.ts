@@ -1,14 +1,17 @@
-import preact from "@preact/preset-vite"
 import { defineConfig } from "vite"
 
 export default defineConfig({
 	build:{
 		emptyOutDir:true, 
+		copyPublicDir:true,
+		outDir:"../dist"
 	},
+	root:"src",
 	resolve:{
 		alias:{
-			"@":"./src"
+			"public/":"../public/",
+			"@/":"/"
 		}
 	},
-	plugins:[preact()],
+	publicDir:"../public",
 })

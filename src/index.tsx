@@ -1,5 +1,5 @@
-import './index.css'
-import { render } from 'preact'
-import App from './routes/Layout'
+import { render } from "preact";
+import "./index.css";
+import App from "./routes/Layout";
 
-render(<App />, document.body)
+render(<App />, document.body);
